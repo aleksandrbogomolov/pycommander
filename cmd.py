@@ -4,15 +4,14 @@ from shutil import copyfile, move
 import util
 
 
-def listfile(path):
-    """List file"""
-    files = os.listdir(path)
-    for file in files:
+def listfiles(path):
+    """List files"""
+    for file in os.listdir(path):
         print file
 
 
 def changedirectory(currentfolder, path):
-    """Changed directory"""
+    """Change directory"""
     if path == '..':
         return currentfolder[0:currentfolder.rindex('/')]
     if path == '':

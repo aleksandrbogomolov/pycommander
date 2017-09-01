@@ -17,7 +17,7 @@ while args[0] != 'exit':
     args = raw_input().lower().split()
     print 'Entered: %s' % args[0]
     if args[0] == 'ls':
-        cmd.listfile(currentfolder)
+        cmd.listfiles(currentfolder)
     elif args[0] == 'cd':
         currentfolder = cmd.changedirectory(currentfolder, args[1])
     elif args[0] == 'cp':
