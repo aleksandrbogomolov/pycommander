@@ -22,7 +22,8 @@ while args[0] != 'exit':
         currentfolder = cmd.changedirectory(currentfolder, args[1])
     elif args[0] == 'cp':
         cmd.copy(currentfolder + '/' + args[1], rootfolder + '/' + args[2])
-    # elif args[0] == 'mv':
+    elif args[0] == 'mv':
+        cmd.move(args[1], args[2])
     # elif args[0] == 'rm':
     # elif args[0] == 'mkdir':
     elif args[0] == 'exit':

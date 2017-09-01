@@ -1,6 +1,6 @@
 """Collect implementation of command"""
 import os
-from shutil import copyfile
+from shutil import copyfile, move
 import util
 
 def listfile(path):
@@ -21,3 +21,7 @@ def changedirectory(currentfolder, path):
 def copy(src, dst):
     """Copy file"""
     copyfile(src, dst)
+
+def movefile(src, dst):
+    """Move file"""
+    move(src, dst)

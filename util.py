@@ -6,6 +6,7 @@ def printgreting(username, folder):
     """Print gretings string"""
     print '======================================================='
     print '%s in %s [%s]' % (username, folder, time.strftime("%X"))
+    print '======================================================='
 
 def getproperties(key):
     """Getting properties from properties.ini file"""
