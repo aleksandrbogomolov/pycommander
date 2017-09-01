@@ -4,9 +4,9 @@
 import cmd
 import util
 
-ROOTFOLDER = util.getproperties('rootFolder')
+rootfolder = util.getproperties('rootFolder')
 
-currentfolder = ROOTFOLDER
+currentfolder = rootfolder
 
 user = util.getproperties('userName')
 
@@ -20,7 +20,8 @@ while args[0] != 'exit':
         cmd.listfile(currentfolder)
     elif args[0] == 'cd':
         currentfolder = cmd.changedirectory(currentfolder, args[1])
-    # elif args[0] == 'cp':
+    elif args[0] == 'cp':
+        cmd.copy(currentfolder + '/' + args[1], rootfolder + '/' + args[2])
     # elif args[0] == 'mv':
     # elif args[0] == 'rm':
     # elif args[0] == 'mkdir':

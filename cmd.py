@@ -1,5 +1,6 @@
-"""Collect implementation of command """
+"""Collect implementation of command"""
 import os
+from shutil import copyfile
 import util
 
 def listfile(path):
@@ -16,3 +17,7 @@ def changedirectory(currentfolder, path):
         return util.getproperties('rootFolder')
     else:
         return currentfolder + '/' + path
+
+def copy(src, dst):
+    """Copy file"""
+    copyfile(src, dst)
