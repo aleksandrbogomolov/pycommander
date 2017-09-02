@@ -4,24 +4,24 @@
 import cmd
 import util
 
-rootfolder = util.getproperties('rootFolder')
+rootFolder = util.getProperties('rootFolder')
 
-currentfolder = rootfolder
+currentFolder = rootFolder
 
-user = util.getproperties('userName')
+user = util.getProperties('userName')
 
 args = ['']
 
 while args[0] != 'exit':
-    util.printgreting(user, currentfolder)
+    util.printGreting(user, currentFolder)
     args = raw_input().lower().split()
     print 'Entered: %s' % args[0]
     if args[0] == 'ls':
-        cmd.listfiles(currentfolder)
+        cmd.listFiles(currentFolder)
     elif args[0] == 'cd':
-        currentfolder = cmd.changedirectory(currentfolder, args[1])
+        currentFolder = cmd.changeDirectory(currentFolder, args[1])
     elif args[0] == 'cp':
-        cmd.copy(currentfolder + '/' + args[1], rootfolder + '/' + args[2])
+        cmd.copy(currentFolder + '/' + args[1], rootFolder + '/' + args[2])
     elif args[0] == 'mv':
         cmd.move(args[1], args[2])
     # elif args[0] == 'rm':
