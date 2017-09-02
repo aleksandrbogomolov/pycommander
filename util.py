@@ -5,9 +5,10 @@ import time
 
 def printgreting(username, folder):
     """Print gretings string"""
-    print '======================================================='
+    delitim = "======================================================="
+    print delitim
     print '%s in %s [%s]' % (username, folder, time.strftime("%X"))
-    print '======================================================='
+    print delitim
 
 
 def getproperties(key):
