@@ -4,19 +4,19 @@ from shutil import copyfile, move
 import util
 
 
-def listFiles(path):
+def list_files(path):
     """List files"""
-    for file in os.listdir(path):
-        print file
+    for file_name in os.listdir(path):
+        print file_name
 
 
-def changeDirectory(currentFolder, path):
+def change_directory(current_folder, path):
     """Change directory"""
     if path == '..':
-        return currentFolder[0:currentFolder.rindex('/')]
+        return current_folder[0:current_folder.rindex('/')]
     if path == '':
-        return util.getProperties('rootFolder')
-    return currentFolder + '/' + path
+        return util.get_properties('rootFolder')
+    return current_folder + '/' + path
 
 
 def copy(src, dst):
@@ -24,6 +24,14 @@ def copy(src, dst):
     copyfile(src, dst)
 
 
-def movefile(src, dst):
+def move_file(src, dst):
     """Move file"""
     move(src, dst)
+
+
+def remove_file(src):
+    """Remove file"""
+    if os.path.isdir(src):
+        os.rmdir(src)
+    else:
+        os.remove(src)

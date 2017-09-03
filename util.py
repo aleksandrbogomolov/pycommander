@@ -3,7 +3,7 @@ import configparser
 import time
 
 
-def printGreting(username, folder):
+def print_greting(username, folder):
     """Print gretings string"""
     delitim = "======================================================="
     print delitim
@@ -11,7 +11,7 @@ def printGreting(username, folder):
     print delitim
 
 
-def getProperties(key):
+def get_properties(key):
     """Getting properties from properties.ini file"""
     config = configparser.ConfigParser()
     config.read('config/properties.ini')
