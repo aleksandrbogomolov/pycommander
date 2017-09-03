@@ -13,7 +13,7 @@ user = util.get_properties('userName')
 args = ['']
 
 while args[0] != 'exit':
-    util.print_greting(user, current_folder)
+    util.print_greetings(user, current_folder)
     args = raw_input().lower().split()
     print 'Entered: %s' % args[0]
     if args[0] == 'ls':

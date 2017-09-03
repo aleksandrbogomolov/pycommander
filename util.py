@@ -1,10 +1,11 @@
 """Collect util methods"""
-import configparser
 import time
 
+import configparser
 
-def print_greting(username, folder):
-    """Print gretings string"""
+
+def print_greetings(username, folder):
+    """Print greetings string"""
     delitim = "======================================================="
     print delitim
     print '%s in %s [%s]' % (username, folder, time.strftime("%X"))
